@@ -11,8 +11,8 @@ jobs:
       uses: actions/checkout@master
     - name: Build and Deploy
       run: |
-      sed -i "s/:ACCESS_TOKEN/:${{secrets.ACCESS_TOKEN}}/g" _config.yml 
-      mkdir ~/.npm-global && npm config set prefix '~/.npm-global' && export PATH=~/.npm-global/bin:$PATH
-      git config --global user.email "actions@github.com"
-      git config --global user.name "GithubActions"
-      npm install && npm install hexo-cli -g && hexo generate && hexo deploy
+        sed -i "s/:ACCESS_TOKEN/:${{secrets.ACCESS_TOKEN}}/g" _config.yml 
+        mkdir ~/.npm-global && npm config set prefix '~/.npm-global' && export PATH=~/.npm-global/bin:$PATH
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GithubActions"
+        npm install && npm install hexo-cli -g && hexo generate && hexo deploy
