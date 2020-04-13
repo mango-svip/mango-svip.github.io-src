@@ -99,5 +99,5 @@ theme: hexo-theme-indigo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://mango-svip:$ACCESS_TOKEN@github.com/mango-svip/mango-svip.github.io.git
+  repo: https://mango-svip:ACCESS_TOKEN@github.com/mango-svip/mango-svip.github.io.git
   branch: master
