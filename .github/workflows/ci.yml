@@ -10,9 +10,4 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: master
-        FOLDER: build
-        BUILD_SCRIPT:  sed -i "s/:ACCESS_TOKEN/:${{secrets.ACCESS_TOKEN}}/g" _config.yml && npm install && npm install hexo-cli -g && hexo generate && hexo deploy
+      run: sed -i "s/:ACCESS_TOKEN/:${{secrets.ACCESS_TOKEN}}/g" _config.yml && npm install && npm install hexo-cli -g && hexo generate && hexo deploy
