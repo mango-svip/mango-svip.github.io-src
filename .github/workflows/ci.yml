@@ -15,4 +15,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: master
         FOLDER: build
-        BUILD_SCRIPT: pwd && npm install && npm install hexo-cli -g && hexo generate && hexo deploy
+        BUILD_SCRIPT:  sed -i "s/:ACCESS_TOKEN/:${{secrets.ACCESS_TOKEN}}/g" _config.yml && npm install && npm install hexo-cli -g && hexo generate && hexo deploy
