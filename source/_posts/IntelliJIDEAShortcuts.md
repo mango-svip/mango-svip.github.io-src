@@ -1,5 +1,6 @@
 ---
 title: IntelliJ IDEA Shortcuts
+date: 2020-04-07 14:02:08
 comments: false
 reward: false
 ---
